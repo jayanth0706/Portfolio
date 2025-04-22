@@ -29,7 +29,7 @@ const Certificates: React.FC = () => {
       skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Node.js', 'MongoDB']
     },
     {
-      title: 'Hardware & OS',
+      title: 'Hardware & Operating Systems',
       issuer: 'Coursera',
       date: 'February 2024',
       image: '/images/OperatingSystems_page-0001.jpg',
