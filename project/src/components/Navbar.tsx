@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
               <Linkedin size={20} />
             </a>
             <a 
-              href="/public/images/Jayanth-GCV.pdf" 
+              href="/images/Jayanth-GCV.pdf" 
               className="flex items-center text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
               aria-label="Resume"
             >
