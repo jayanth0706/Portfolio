@@ -20,10 +20,10 @@ const Projects: React.FC = () => {
       title: 'Note Making App',
       description: 'A full-stack application for creating and managing notes with real-time updates and responsive design',
       images: [
-        '/public/images/Note1.png',
-        '/public/images/Note2.png',
-        '/public/images/Note3.png',
-        '/public/images/Note4.png'
+        '/images/Note1.png',
+        '/images/Note2.png',
+        '/images/Note3.png',
+        '/images/Note4.png'
       ],
       tags: ['Full Stack', 'React', 'Node.js', 'MongoDB'],
       github: 'https://github.com/jayanth0706/Note-making-using-MERN',
@@ -34,10 +34,10 @@ const Projects: React.FC = () => {
       title: 'Sales Analysis Project and Reporting for a Retail Chain',
       description: 'A data analysis project focused on visualizing sales data, identifying trends, and providing actionable insights',
       images: [
-        '/public/images/Sales1.png',
-        '/public/images/Sales2.png',
-        '/public/images/Sales3.png',
-        '/public/images/Sales4.png'
+        '/images/Sales1.png',
+        '/images/Sales2.png',
+        '/images/Sales3.png',
+        '/images/Sales4.png'
       ],
       tags: ['Data Analysis', 'Python', 'SQL', 'Tableau'],
       github: 'https://github.com/jayanth0706/Sales-Analysis-FinalProject/tree/master',

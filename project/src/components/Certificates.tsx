@@ -16,7 +16,7 @@ const Certificates: React.FC = () => {
       title: 'Meta Android Developer',
       issuer: 'Coursera',
       date: 'August 2024',
-      image: 'public/images/AndriodDevelopment12Courses_jpgimage.jpeg',
+      image: '/images/AndriodDevelopment12Courses_jpgimage.jpeg',
       link: 'https://coursera.org/share/09301da141007aa162d627e3905972fa',
       skills: ['Android', 'Kotlin', 'Mobile Development', 'Material Design', 'Firebase']
     },
@@ -24,7 +24,7 @@ const Certificates: React.FC = () => {
       title: 'Web Development',
       issuer: 'Coding Blocks',
       date: 'August 2024',
-      image: 'public/images/Full_Stack_Intership_CodingBlocks_page-0001.jpg',
+      image: '/images/Full_Stack_Intership_CodingBlocks_page-0001.jpg',
       link: 'https://online.codingblocks.com/app/certificates/CBOL-302100-979524da',
       skills: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Node.js', 'MongoDB']
     },
@@ -32,7 +32,7 @@ const Certificates: React.FC = () => {
       title: 'Hardware & OS',
       issuer: 'Coursera',
       date: 'February 2024',
-      image: 'public/images/OperatingSystems_page-0001.jpg',
+      image: '/images/OperatingSystems_page-0001.jpg',
       link: 'https://coursera.org/share/87d3f1147d1d9051bf151e741c74b7b6',
       skills: ['Computer Architecture', 'Operating Systems', 'Computer Networks', 'System Security']
     },
@@ -40,7 +40,7 @@ const Certificates: React.FC = () => {
       title: 'Front-End Career Path',
       issuer: 'LinkedIn Learning',
       date: 'October 2022',
-      image: 'public/images/FrontEnd_Web_Development_LinkedIn_page-0001.jpg',
+      image: '/images/FrontEnd_Web_Development_LinkedIn_page-0001.jpg',
       link: 'https://www.linkedin.com/posts/jayanth0706_explore-a-career-in-front-end-web-development-activity-7297987607500660737-8_rx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD5CO-oBKqXjdv5w4LD6ytcFmG6wpfwhdOg',
       skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Responsive Design', 'UX/UI Principles']
     }
