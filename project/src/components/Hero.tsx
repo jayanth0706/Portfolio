@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
           <div className="hidden md:block md:w-2/5 relative mt-12 md:mt-0">
             <div className="relative w-full aspect-square rounded-full bg-gradient-to-tr from-blue-100 to-blue-50 dark:from-blue-900/30 dark:to-blue-800/10 p-2">
               <img
-                src="/public/images/Profile.jpg"
+                src="images/Profile.jpg"
                 alt="Professional portrait of Pavanagundla Jayanth"
                 className="w-full h-full object-cover rounded-full"
               />
