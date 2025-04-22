@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
             
             <div className="flex flex-wrap gap-4">
               <a
-                href="/public/images/Jayanth-GCV.pdf"
+                href="/images/Jayanth-GCV.pdf"
                 className="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
               >
                 <FileDown size={18} />
