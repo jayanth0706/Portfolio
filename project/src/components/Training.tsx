@@ -37,7 +37,7 @@ const trainings: TrainingItem[] = [
     title: "Full Stack Web Development",
     institution: "Coding Blocks",
     duration: "June 2024 – August 2024",
-    logo: "/public/images/coding blocks.jpeg",
+    logo: "/images/coding blocks.jpeg",
     certificateImage: "/images/Full_Stack_Intership_CodingBlocks_page-0001.jpg", 
     certificateLink: "https://online.codingblocks.com/app/certificates/CBOL-302100-979524da",
     overview:
