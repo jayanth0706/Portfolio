@@ -9,6 +9,7 @@ interface Education {
   score: string;
   scoreLabel: string;
   description?: string;
+  logoUrl?: string;
 }
 
 const Education: React.FC = () => {
@@ -20,7 +21,9 @@ const Education: React.FC = () => {
       location: 'Punjab, India',
       score: '7.5',
       scoreLabel: 'CGPA',
-      description: 'Specializing in AI and Machine Learning with coursework in Data Structures, Algorithms, Database Management, Web Development, and Software Engineering.'
+      logoUrl: '/images/lpulogo.jpg',
+      description:
+        'Specializing in AI and Machine Learning with coursework in Data Structures, Algorithms, Database Management, Web Development, and Software Engineering.',
     },
     {
       degree: 'Intermediate Education',
@@ -29,7 +32,9 @@ const Education: React.FC = () => {
       location: 'Telangana, India',
       score: '98.5',
       scoreLabel: 'Percentage',
-      description: 'Focused on Mathematics, Physics, and Computer Science with advanced coursework in programming fundamentals.'
+      logoUrl: '/images/narayana.png',
+      description:
+        'Focused on Mathematics, Physics, and Computer Science with advanced coursework in programming fundamentals.',
     },
     {
       degree: 'Matriculation',
@@ -38,12 +43,14 @@ const Education: React.FC = () => {
       location: 'Telangana, India',
       score: '100',
       scoreLabel: 'Percentage',
-      description: 'Achieved perfect score with distinction in Mathematics and Science, demonstrating strong analytical and problem-solving skills.'
-    }
+      logoUrl: '/images/vrhs.jpg',
+      description:
+        'Achieved perfect score with distinction in Mathematics and Science, demonstrating strong analytical and problem-solving skills.',
+    },
   ];
 
   return (
-    <section id="education" className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
+    <section id="education" className="py-16 md:py-24 bg-gray-100 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
@@ -54,29 +61,38 @@ const Education: React.FC = () => {
             My academic journey that has equipped me with the knowledge and skills for a career in technology.
           </p>
         </div>
-        
+
         <div className="space-y-12">
           {educationHistory.map((education, index) => (
-            <div 
-              key={index} 
-              className="flex flex-col md:flex-row bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300"
+            <div
+              key={index}
+              className="flex flex-col md:flex-row rounded-2xl overflow-hidden bg-transparent"
             >
-              <div className="md:w-1/4 bg-blue-600 dark:bg-blue-800 text-white p-6 flex flex-col justify-center items-center">
-                <div className="mb-4">
-                  <GraduationCap size={40} />
+              {/* Score + Logo Column (no shadow) */}
+              <div className="md:w-1/4 bg-white text-gray-900 p-6 flex flex-col items-center justify-center space-y-6 border-r border-gray-200 dark:border-gray-700">
+                <div className="bg-white rounded-lg p-4 text-center w-24">
+                  <GraduationCap size={24} className="mx-auto mb-2 text-blue-600" />
+                  <div className="text-xl font-semibold">{education.score}</div>
+                  <div className="text-sm text-gray-500">{education.scoreLabel}</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">{education.score}</div>
-                  <div className="text-sm opacity-80">{education.scoreLabel}</div>
-                </div>
+                {education.logoUrl && (
+                  <img
+                    src={education.logoUrl}
+                    alt={`${education.institution} Logo`}
+                    className="w-16 h-16 object-contain rounded bg-white p-2"
+                  />
+                )}
               </div>
-              
-              <div className="md:w-3/4 p-6 md:p-8">
+
+              {/* Main Content with shadow */}
+              <div className="md:w-3/4 p-6 md:p-8 bg-white dark:bg-gray-800 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700">
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {education.degree}
                 </h3>
-                <p className="text-blue-600 dark:text-blue-400 text-lg mb-4">{education.institution}</p>
-                
+                <p className="text-blue-600 dark:text-blue-400 text-lg mb-4">
+                  {education.institution}
+                </p>
+
                 <div className="flex flex-wrap gap-4 text-gray-500 dark:text-gray-400 mb-4">
                   <div className="flex items-center gap-1">
                     <Calendar size={18} />
@@ -87,22 +103,33 @@ const Education: React.FC = () => {
                     <span>{education.location}</span>
                   </div>
                 </div>
-                
+
                 {education.description && (
-                  <p className="text-gray-600 dark:text-gray-400 mt-4">{education.description}</p>
+                  <p className="text-gray-700 dark:text-gray-300 mt-2">
+                    {education.description}
+                  </p>
                 )}
-                
+
                 {index === 0 && (
-                  <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                    <h4 className="font-medium flex items-center gap-1 text-gray-900 dark:text-white mb-2">
+                  <div className="mt-6 p-4 bg-blue-100 dark:bg-blue-900/20 rounded-lg">
+                    <h4 className="font-medium flex items-center gap-2 text-gray-900 dark:text-white mb-2">
                       <Award size={18} className="text-blue-600 dark:text-blue-400" />
                       Relevant Coursework
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {['Data Structures', 'Algorithms', 'Database Systems', 'Web Development', 'AI & ML', 'Computer Networks', 'Software Engineering', 'Operating Systems'].map((course, courseIndex) => (
-                        <span 
-                          key={courseIndex} 
-                          className="px-3 py-1 bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-sm rounded-md"
+                      {[
+                        'Data Structures',
+                        'Algorithms',
+                        'Database Systems',
+                        'Web Development',
+                        'AI & ML',
+                        'Computer Networks',
+                        'Software Engineering',
+                        'Operating Systems',
+                      ].map((course, i) => (
+                        <span
+                          key={i}
+                          className="px-3 py-1 bg-white dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 text-sm rounded-md"
                         >
                           {course}
                         </span>
