@@ -35,6 +35,24 @@ const Projects: React.FC = () => {
       tech: ['Python', 'NumPy', 'Pandas', 'scikit-learn', 'TensorFlow', 'PyTorch']
     },
     {
+      title: 'NSConstructions Website',
+      description: 'NS Constructions is a responsive web application built to showcase construction projects and company services, featuring a modern UI with React, Tailwind CSS, and TypeScript. It highlights project portfolios, company details, and provides an engaging user experience across devices.',
+      images: [
+        '/images/NS1.jpeg',
+        '/images/NS2.jpeg',
+        '/images/NS3.jpeg',
+        '/images/NS4.jpeg',
+        '/images/NS5.jpeg',
+        '/images/NS6.jpeg',
+        '/images/NS7.jpeg',
+        '/images/NS8.jpeg'
+      ],
+      tags: ['Construction', 'Web Development', 'Responsive Design', 'Tailwind CSS'],
+      github: 'https://github.com/jayanth0706/NSConstructions.git',
+      features: ['Showcase of construction projects', 'Company profile and services', 'Responsive user interface', 'Tailwind CSS for styling'],
+      tech: ['React', 'Vite', 'Tailwind CSS', 'TypeScript']
+    },
+    {
       title: 'Note Making App',
       description: 'A full-stack application for creating and managing notes with real-time updates and responsive design',
       images: [
