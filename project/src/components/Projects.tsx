@@ -4,7 +4,9 @@ import { ExternalLink, Github, Search } from 'lucide-react';
 interface Project {
   title: string;
   description: string;
-  images: string[];
+  images?: string[]; 
+  thumbnail?: string; 
+  video?: string; 
   tags: string[];
   github: string;
   demo?: string;
@@ -16,6 +18,22 @@ const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const projects: Project[] = [
+     {
+      title: 'MotoMind AI',
+      description: 'MotoMind_AI is an AI-powered automotive tool that leverages machine learning, deep learning, and image embeddings to intelligently analyze car images',
+      thumbnail: '/images/MotoMindT.png',
+      video: '/images/MotoMindVideo.mp4',
+      tags: ['AI', 'Machine Learning', 'Deep Learning', 'Computer Vision'],
+      github: 'https://github.com/jayanth0706/MotoMind_AI',
+      features: [
+        'Car image processing using embeddings',
+        'Custom dataset creation',
+        'Data scraping and preprocessing pipeline',
+        'Vehicle recognition and similarity analysis',
+        'Recommendation engine based on image embeddings',
+        'Interactive demo application'],
+      tech: ['Python', 'NumPy', 'Pandas', 'scikit-learn', 'TensorFlow', 'PyTorch']
+    },
     {
       title: 'Note Making App',
       description: 'A full-stack application for creating and managing notes with real-time updates and responsive design',
@@ -77,7 +95,7 @@ const Projects: React.FC = () => {
             >
               <div className="relative aspect-[16/9] overflow-hidden bg-gray-200 dark:bg-gray-800">
                 <img 
-                  src={project.images[0]} 
+                  src={project.thumbnail || project.images?.[0]} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
@@ -156,17 +174,30 @@ const Projects: React.FC = () => {
               </svg>
             </button>
 
-            {/* Image Grid */}
-            <div className="grid grid-cols-2 gap-2 p-4 md:p-6">
-              {selectedProject.images.map((img, idx) => (
-                <div key={idx} className="aspect-square overflow-hidden rounded-lg">
-                  <img
-                    src={img}
-                    alt={`Project ${selectedProject.title} image ${idx + 1}`}
-                    className="w-full h-auto object-contain max-h-[500px] mx-auto"
-                  />
+            {/* Media Section */}
+            <div className="p-4 md:p-6">
+              {selectedProject.video ? (
+                <video 
+                  controls 
+                  poster={selectedProject.thumbnail}
+                  className="w-full rounded-lg max-h-[500px] mx-auto"
+                >
+                  <source src={selectedProject.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <div className="grid grid-cols-2 gap-2">
+                  {selectedProject.images?.map((img, idx) => (
+                    <div key={idx} className="aspect-square overflow-hidden rounded-lg">
+                      <img
+                        src={img}
+                        alt={`Project ${selectedProject.title} image ${idx + 1}`}
+                        className="w-full h-auto object-contain max-h-[500px] mx-auto"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
 
             <div className="p-6 md:p-8">
