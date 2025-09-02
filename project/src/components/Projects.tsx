@@ -36,7 +36,7 @@ const Projects: React.FC = () => {
     },
     {
       title: 'NSConstructions Website',
-      description: 'NS Constructions is a responsive web application built to showcase construction projects and company services, featuring a modern UI with React, Tailwind CSS, and TypeScript. It highlights project portfolios, company details, and provides an engaging user experience across devices. Check it out [here](https://ns-constructions.vercel.app/).',
+      description: 'NS Constructions is a responsive web application built to showcase construction projects and company services, featuring a modern UI with React, Tailwind CSS, and TypeScript. It highlights project portfolios, company details, and provides an engaging user experience across devices.\n Website: "https://ns-constructions.vercel.app/"',
       images: [
         '/images/NS1.jpeg',
         '/images/NS2.jpeg',
