@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <a href="#home" className="text-xl font-bold">
-              <span className="text-blue-600 dark:text-blue-400">Pavanagundla</span>Jayanth
+              <span className="text-blue-600 dark:text-blue-400">Pavanagundla </span>Jayanth
             </a>
           </div>
           
