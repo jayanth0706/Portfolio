@@ -186,9 +186,9 @@ const Projects: React.FC = () => {
                   Your browser does not support the video tag.
                 </video>
               ) : (
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-0">
                   {selectedProject.images?.map((img, idx) => (
-                    <div key={idx} className="aspect-square overflow-hidden rounded-lg">
+                    <div key={idx} className="overflow-hidden rounded-lg">
                       <img
                         src={img}
                         alt={`Project ${selectedProject.title} image ${idx + 1}`}
